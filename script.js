@@ -12,35 +12,30 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 //random integer
-function getRanInt(min, max)
-{
+function getRanInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 //make computer choose rock paper scissors
-function computerPlay()
-{
+function computerPlay() {
   var compSelect;
   var ranInt = getRanInt(1,3);
-  switch (ranInt)
-  {
-  case 1:
-    compSelect = 'rock';
-      break;
-  case 2:
-    compSelect = 'paper';
-      break;
-  case 3:
-    compSelect = 'scissors';
-      break;
+  switch (ranInt) {
+    case 1:
+      compSelect = 'rock';
+        break;
+    case 2:
+      compSelect = 'paper';
+        break;
+    case 3:
+      compSelect = 'scissors';
+        break;
   }
   return compSelect;
 }
 // play one round of the game
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == 'rock')
-  {
-    switch (computerSelection)
-    {
+  if (playerSelection == 'rock') {
+    switch (computerSelection) {
       case 'rock':
         computerChoice.textContent = "I choose rock, too. DRAW!!";
         break;
@@ -54,10 +49,8 @@ function playRound(playerSelection, computerSelection) {
         break;
     }
   }
-  else if (playerSelection == 'paper')
-  {
-    switch (computerSelection)
-    {
+  else if (playerSelection == 'paper') {
+    switch (computerSelection) {
       case 'rock':
         ++playerScore;
         computerChoice.textContent = "I choose rock. You win";
@@ -71,10 +64,8 @@ function playRound(playerSelection, computerSelection) {
         break;
       }
   }
-  else if (playerSelection == 'scissors')
-  {
-    switch (computerSelection)
-    {
+  else if (playerSelection == 'scissors') {
+    switch (computerSelection) {
         case 'rock':
           ++computerScore;
           computerChoice.textContent = "I choose rock. You lose!";
