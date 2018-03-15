@@ -1,3 +1,6 @@
+body {
+  background-color: orange;
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -6,11 +9,10 @@
   grid-template-areas:
     ". c c c ."
     ". b b b ."
-    ". b b b ."
     ". a a a ."
     ". d d d ."
+    ". d d d ."
     ". e e e .";
-    background-color: orange;
 }
 .buttonContainer {
   grid-area: d;
@@ -35,30 +37,42 @@ button:hover {
   box-shadow: 0 0 1rem #ffc600;
 }
 
-.imageContainer {
+.mainTextContainer {
   grid-area: b;
   align-self: center;
   justify-self: center;
 }
-img {
-  border-radius: 1%;
-  width: auto;
-  height: auto;
-  border: 2px solid black;
+.mainText {
+  font-size: 10em;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 1);
+}
+.start {
+  text-align: center;
+  margin-top: 15px;
 }
 .showScore {
+  width: 500px;
+  height: 100px;
   grid-area: a;
   align-self: end;
   justify-self: center;
 }
-
 .computerChoice {
-  font-size: 1.5em;
+  font-size: 2em;
 }
-
 .hideButtons {
   display: none;
 }
 .reset {
   font-size: 1.3em;
+}
+.playerScore {
+  float: left;
+  display: inline-block;
+  font-size: 1.5em;
+}
+.computerScore {
+  float: right;
+  font-size: 1.5em;
 }
