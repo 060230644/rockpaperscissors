@@ -2,9 +2,30 @@
 <html>
 <head>
   <title>Rock Paper Scissors</title>
-  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="rpc.css">
+
 </head>
 <body>
 
+<div class="wrapper">
+  <div class="imageContainer">
+    <a href="#"><img src="janken.png"></a>
+  </div>
+
+  <div class="showScore">
+    <h1 class="computerChoice"></h1><br>
+    <h1 class="playerScore"></h1>
+    <h1 class="computerScore"></h1>
+    <h1 class="winner"></h1>
+  </div>
+  <div class="buttonContainer">
+    <button class="game rock">Rock</button>
+    <button class="game paper">Paper</button>
+    <button class="game scissors">Scissors</button>
+    <button class="reset hideButtons">Play Again</button>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
