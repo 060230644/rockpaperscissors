@@ -1,8 +1,8 @@
 //global variables
-var playerScore = 0;
-var computerScore = 0;
-var playerSelection;
-var roundCounter = 0;
+let playerScore = 0;
+let computerScore = 0;
+let playerSelection;
+let roundCounter = 0;
 const computerChoice = document.querySelector('.computerChoice');
 const playerScoreShow = document.querySelector('.playerScore');
 const computerScoreShow = document.querySelector('.computerScore');
@@ -17,8 +17,8 @@ function getRanInt(min, max) {
 }
 //make computer choose rock paper scissors
 function computerPlay() {
-  var compSelect;
-  var ranInt = getRanInt(1,3);
+  let compSelect;
+  let ranInt = getRanInt(1,3);
   switch (ranInt) {
     case 1:
       compSelect = 'rock';
@@ -122,7 +122,7 @@ function reset() {
 }
 // this function will toggle buttons on/off
 function toggleButtons() {
-  for (var i = 0; i < gameButtons.length; i++) {
+  for (let i = 0; i < gameButtons.length; i++) {
     oneButton = gameButtons[i];
     oneButton.classList.toggle('hideButtons');
   }
